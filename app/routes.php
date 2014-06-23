@@ -15,3 +15,13 @@ Route::get('/', function()
 {
 	return View::make('hello');
 });
+
+Route::get('/test',array(
+	'as'=>'test-function',
+	'uses'=>'TestController@testFunction'
+));
+
+Route::get('/test-db',array(
+	'as'=>'test-db',
+	'uses'=>'TestController@testDatabase'
+));
