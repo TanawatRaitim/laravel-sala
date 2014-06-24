@@ -33,6 +33,15 @@ App::after(function($request, $response)
 |
 */
 
+
+Route::filter('big', function(){
+	
+	echo 'big';
+	exit();
+	
+});
+
+
 Route::filter('auth', function()
 {
 	if (Auth::guest())
