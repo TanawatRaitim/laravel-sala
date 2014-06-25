@@ -13,7 +13,8 @@
 
 Route::get('/', function()
 {
-	return View::make('hello');
+	// return View::make('hello');
+	return 'Welcome to laravel-sala-project';
 });
 
 Route::get('/test',array(
@@ -37,12 +38,16 @@ Route::get('books',function(){
 	return View::make('books')->with('books',$books);
 });
 
+
+//show all province
 Route::get('/provinces',array(
-	'as'=>'province',
+	'as'=>'provinces',
 	'uses'=>'ProvinceController@getProvinces'
 	
 ));
 
+
+//show specific province
 Route::get('/show-province/{id}',array(
 	'as'=>'show-province',
 	'uses'=>'ProvinceController@showProvince'
@@ -68,6 +73,18 @@ Route::get('/show-province/{id}',array(
 	
  });
  
+ Route::get('province/create',array(
+ 	'as'=>'province-create-get',
+ 	'uses'=>'ProvinceController@getProvinceCreate'
+ ));
+ 
+ Route::post('province/create',array(
+ 	'as'=>'province-create-post',
+ 	'uses'=>'ProvinceController@postProvinceCreate'
+ ));
+ 
+ 
+
  
  
  

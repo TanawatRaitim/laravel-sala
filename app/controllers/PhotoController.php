@@ -18,7 +18,7 @@ class PhotoController extends \BaseController {
 	 *
 	 * @return Response
 	 */
-	public function create()
+	public function create() 	//ex. createUser
 	{
 		//
 	}
@@ -29,7 +29,7 @@ class PhotoController extends \BaseController {
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function store() 	//ex.storeUser
 	{
 		//
 	}
@@ -41,7 +41,7 @@ class PhotoController extends \BaseController {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function show($id)
+	public function show($id) 	//ex. showUser()
 	{
 		//
 	}
@@ -53,9 +53,10 @@ class PhotoController extends \BaseController {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function edit($id)
+	public function edit($id) 	//ex. editUser()
 	{
 		//
+		
 	}
 
 

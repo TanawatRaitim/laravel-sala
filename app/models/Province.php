@@ -1,3 +1,7 @@
 <?php
 
-class Province extends Eloquent {}
+class Province extends Eloquent {
+	
+	public $timestamps = false;
+	
+}
