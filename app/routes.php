@@ -11,28 +11,50 @@
 |
 */
 
+/**
+ * home page
+ */
 Route::get('/', function()
 {
 	// return View::make('hello');
 	return 'Welcome to laravel-sala-project';
 });
 
+
+/**
+ * test function page
+ */
 Route::get('/test',array(
 	'as'=>'test-function',
 	'uses'=>'TestController@testFunction'
 ));
 
+/**
+ * test db page
+ */
 Route::get('/test-db',array(
 	'as'=>'test-db',
 	'uses'=>'TestController@testDatabase'
 ));
 
+
+/**
+ * 
+ */
 Route::get('/route1',function(){
 	return 'Route1!!!';	
 });
 
+
+/**
+ * 
+ */
 Route::get('/route2','RouteController@getIndex');
 
+
+/**
+ * show books
+ */
 Route::get('books',function(){
 	$books = Book::all();
 	return View::make('books')->with('books',$books);
@@ -73,40 +95,35 @@ Route::get('/show-province/{id}',array(
 	
  });
  
- Route::get('province/create',array(
- 	'as'=>'province-create-get',
- 	'uses'=>'ProvinceController@getProvinceCreate'
- ));
  
- Route::post('province/create',array(
+/**
+ * Form input province
+ */
+Route::get('province/create',array(
+	'as'=>'province-create-get',
+	'uses'=>'ProvinceController@getProvinceCreate'
+));
+
+
+/**
+ * Save province to database
+ */
+Route::post('province/create',array(
  	'as'=>'province-create-post',
  	'uses'=>'ProvinceController@postProvinceCreate'
- ));
- 
- 
+));
+
+
+Route::get('/relation', array(
+	'as'=>'relation',
+	'uses'=>'TestController@getRelation'
+));
+
 
  
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
+
+
+
  
  
  

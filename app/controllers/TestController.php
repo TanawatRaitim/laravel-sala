@@ -40,10 +40,6 @@ class TestController extends BaseController {
 			echo 'not have key';
 		}
 		
-		
-		
-		//echo $arr['access'][500];
-		
 		echo '<br />';
 		
 		echo '-----------------------------';
@@ -51,23 +47,22 @@ class TestController extends BaseController {
 		echo '<pre>';
 		print_r($arr);
 		echo '</pre>';
-		
-		
 	}
 	
 	public function testDatabase(){
-		
-		
-		
 		$history = History::find(3);
-		
 		echo $history->info;
-		
-		
-		
-		
 		echo '<pre>';
 		print_r($history);
+		echo '</pre>';
+	}
+	
+	public function getRelation()
+	{
+		$histories = Member::find(25)->history;
+		echo $histories->count();
+		echo '<pre>';
+		print_r($histories);
 		echo '</pre>';
 	}
 

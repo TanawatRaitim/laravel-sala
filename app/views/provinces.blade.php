@@ -9,6 +9,10 @@
 			<p>
 				<a href="{{ URL::route('province-create-get') }}" class="btn btn-primary">create new province</a>
 			</p>
+			
+			<p>
+				{{ $provinces->links() }}
+			</p>
 		
 		
 			<table class="table table-bordered table-condensed">
