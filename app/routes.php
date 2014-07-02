@@ -92,6 +92,9 @@ Route::get('/show-province/{id}',array(
  Route::get('find-book/{book_id}', function(Book $book_id){
  	
 	//
+	echo '<pre>';
+	print_r($book_id);
+	echo '</pre>';
 	
  });
  
@@ -119,13 +122,3 @@ Route::get('/relation', array(
 	'uses'=>'TestController@getRelation'
 ));
 
-
- 
-
-
-
- 
- 
- 
- 
- 
